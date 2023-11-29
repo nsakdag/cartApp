@@ -16,14 +16,10 @@ const shoppingListEl = document.getElementById("shopping-list")
 
 addButtonEl.addEventListener("click", function() {
     let inputValue = inputFieldEl.value
-  
-    if (inputValue.trim() !== "") {
-        push(shoppingListInDB, inputValue)
-        clearInputFieldEl()
-    } else {
-        
-        alert("Please enter something!")
-    }
+    
+    push(shoppingListInDB, inputValue)
+    
+    clearInputFieldEl()
 })
 
 onValue(shoppingListInDB, function(snapshot) {
